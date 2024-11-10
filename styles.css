@@ -36,6 +36,11 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
 }
 
 .container {
@@ -61,10 +66,6 @@ footer {
     header h1 {
         font-size: 1.5em;
     }
-    nav a {
-        font-size: 0.9em;
-        margin: 0 10px;
-    }
     .container {
         width: 90%;
     }
@@ -73,9 +74,5 @@ footer {
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.2em;
-    }
-    nav a {
-        font-size: 0.9em;
-        margin: 0 10px;
     }
 }
