@@ -61,22 +61,6 @@ footer {
     width: 100%;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-    .container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.2em;
-    }
-}
-
 /* 联系我页面的特殊样式 */
 .bottom-text-w3ls {
     display: inline-block;
@@ -106,4 +90,23 @@ footer {
 
 .email-button:hover {
     background-color: #a02f00;
+}
+
+/* 手机端样式 */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* 隐藏水平方向的滚动条 */
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
 }
