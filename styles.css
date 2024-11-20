@@ -4,8 +4,6 @@
     --secondary-color: #f4f4f4;
     --link-color: #0084ff;
     --link-hover-color: #0056b3;
-    --email-color: #d44500;
-    --email-hover-color: #a02f00;
     --text-color: #333;
     --background-color: #f8f8f8;
     --white: #ffffff;
@@ -41,27 +39,33 @@ header h1 a {
 }
 
 /* 导航栏样式 */
-nav {
-    display: flex;
-    justify-content: center;
+.nav-bar {
     background-color: var(--secondary-color);
     padding: 10px 0;
-    flex-wrap: nowrap; /* 防止换行 */
-    overflow-x: auto; /* 允许横向滚动 */
 }
 
-nav a {
-    white-space: nowrap; /* 禁止文字换行 */
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
     color: var(--text-color);
     text-decoration: none;
-    margin: 0 10px;
     font-size: 1em;
-    padding: 5px 10px;
+    padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #000;
+.nav-bar ul li a:hover {
+    color: var(--link-hover-color);
 }
 
 /* 页面主要内容区域样式 */
@@ -81,39 +85,6 @@ footer {
     padding: 10px 0;
 }
 
-/* 联系方式按钮样式 */
-.contact-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.contact-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.contact-button--red {
-    background-color: var(--email-color);
-}
-
-.contact-button--red:hover {
-    background-color: var(--email-hover-color);
-}
-
-contact-button--blue {
-    background-color: var(--link-color);
-}
-
-.contact-button--blue:hover {
-    background-color: var(--link-hover-color);
-}
-
 /* 响应式样式 */
 @media (max-width: 768px) {
     body {
@@ -125,12 +96,8 @@ contact-button--blue {
     .container {
         width: 90%;
     }
-    nav {
-        padding: 5px 0; /* 缩小导航栏高度 */
-    }
-    nav a {
-        font-size: 0.9em; /* 缩小字体大小 */
-        margin: 0 5px; /* 减小导航项间距 */
+    .nav-bar ul li a {
+        font-size: 0.9em;
     }
 }
 
@@ -138,10 +105,10 @@ contact-button--blue {
     header h1 {
         font-size: 1.2em;
     }
-    nav {
-        overflow-x: auto; /* 确保导航栏可以左右滑动 */
+    .nav-bar ul {
+        flex-direction: column; /* 在更小屏幕上导航变为竖排 */
     }
-    nav a {
-        font-size: 0.8em;
+    .nav-bar ul li {
+        margin: 10px 0;
     }
 }
