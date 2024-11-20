@@ -41,12 +41,13 @@ header h1 a {
 /* 导航栏样式 */
 .nav-bar {
     background-color: var(--secondary-color);
+    overflow-x: auto; /* 添加横向滚动条以适应内容 */
+    white-space: nowrap; /* 防止内容换行 */
     padding: 10px 0;
 }
 
 .nav-bar ul {
-    display: flex;
-    justify-content: center;
+    display: inline-flex; /* 保持列表横向排列 */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -62,6 +63,7 @@ header h1 a {
     font-size: 1em;
     padding: 10px 20px;
     transition: color 0.3s ease;
+    display: inline-block; /* 确保链接内容为块元素，便于对齐 */
 }
 
 .nav-bar ul li a:hover {
@@ -105,10 +107,7 @@ footer {
     header h1 {
         font-size: 1.2em;
     }
-    .nav-bar ul {
-        flex-direction: column; /* 在更小屏幕上导航变为竖排 */
-    }
-    .nav-bar ul li {
-        margin: 10px 0;
+    .nav-bar ul li a {
+        font-size: 0.8em;
     }
 }
