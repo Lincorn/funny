@@ -46,14 +46,17 @@ nav {
     justify-content: center;
     background-color: var(--secondary-color);
     padding: 10px 0;
+    flex-wrap: nowrap; /* 防止换行 */
+    overflow-x: auto; /* 允许横向滚动 */
 }
 
 nav a {
+    white-space: nowrap; /* 禁止文字换行 */
     color: var(--text-color);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 1em;
-    padding: 10px 20px;
+    padding: 5px 10px;
     transition: color 0.3s ease;
 }
 
@@ -103,7 +106,7 @@ footer {
     background-color: var(--email-hover-color);
 }
 
-.contact-button--blue {
+contact-button--blue {
     background-color: var(--link-color);
 }
 
@@ -122,14 +125,21 @@ footer {
     .container {
         width: 90%;
     }
+    nav {
+        padding: 5px 0; /* 缩小导航栏高度 */
+    }
     nav a {
-        font-size: 0.9em;
+        font-size: 0.9em; /* 缩小字体大小 */
+        margin: 0 5px; /* 减小导航项间距 */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.2em;
+    }
+    nav {
+        overflow-x: auto; /* 确保导航栏可以左右滑动 */
     }
     nav a {
         font-size: 0.8em;
